@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 float Add(){
     int a, b;
@@ -12,6 +10,8 @@ float Add(){
     printf("second number : ");
     scanf("%d", &b);
     getchar();
+
+
     return a + b;
 }
 
@@ -57,13 +57,28 @@ float Division(){
     return a / b;
 }
 
+float Power(){
+    int a, b;
+    printf("Power Operation \n");
+    printf("first number : ");
+    scanf("%d", &a);
+    getchar();
+
+    printf("second number : ");
+    scanf("%d", &b);
+    getchar();
+
+    return a * a * a * a * a;
+}
+
 void Menu(){
     printf("Welcome to Farhad Rahimi Klie Show \n");
-    printf("1. for ➕ \n");
-    printf("2. for ➖ \n");
-    printf("3. for ✖️ \n");
-    printf("4. for ➗ \n");
-    printf("0. exit \n");
+    printf("1. ➕\n");
+    printf("2. ➖\n");
+    printf("3. ✖️ \n");
+    printf("4. ➗\n");
+    printf("5. Power\n");
+    printf("0. exit\n");
 }
 
 int main(){
@@ -90,6 +105,13 @@ int main(){
     case 4:
         result = Division();
         printf("Result is : %.2f \n", result);
+        break;
+    case 5:
+        result = Power();
+        printf("Result is : %.2f \n", result);
+        break;
+    case 0:
+        printf("Bye\n");
         break;
     default:
         printf("Invalid Operation \n");
